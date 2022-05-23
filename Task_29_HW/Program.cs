@@ -30,14 +30,12 @@ void PrintArray(int[] col2)
         if (pos < count - 1)
         {
             Console.Write($"{col2[pos]}, ");
-            pos++;
         }
         else
         {
             Console.WriteLine($"{col2[pos]}]");
-            pos++;
         }
-
+        pos++;
     }
 }
 
