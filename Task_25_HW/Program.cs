@@ -8,17 +8,23 @@ Console.Write("Введите число A -> ");
 int a = int.Parse(Console.ReadLine());
 Console.Write("Введите число B -> ");
 int b = int.Parse(Console.ReadLine());
-int res = 1;
-if (b < 0)
+
+// через метод
+void AdegB (int argA,int argB)
 {
-    Console.WriteLine("Введите натуральное число B");
-}
-else
-{
-    for (int i = 0; i < b; i++)
+    int res = 1;
+    if (argB < 0)
     {
-        res = res * a;
+        Console.WriteLine("Необходимо вводить натуральное число B");
     }
-    Console.WriteLine($"Число A в степени B = {res}");
+    else
+    {
+        for (int i = 0; i < argB; i++)
+        {
+            res = res * argA;
+        }
+        Console.WriteLine($"Число A в степени B = {res}");
+    }
 }
 
+AdegB (a, b);
