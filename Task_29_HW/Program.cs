@@ -5,17 +5,17 @@
 
 Console.Write("Размер массива -> ");
 int lenArray = int.Parse(Console.ReadLine());
-int [] array = new int [lenArray];
+int[] array = new int[lenArray];
 
-void FillArray (int[] col1)
+void FillArray(int[] col1)
 {
     int lenFill = col1.Length;
     int index = 0;
-        while (index < lenFill)
+    while (index < lenFill)
     {
         // Console.Write ($"Введите эл.№ {index} -> "); // для ввода вручную
         // array[index] = int.Parse(Console.ReadLine()); // для ввода вручную
-        array[index] = new Random().Next(1, 100); // для ввода случайным образом
+        col1[index] = new Random().Next(1, 100); // для ввода случайным образом
         index++;
     }
 }
@@ -25,9 +25,9 @@ void PrintArray(int[] col2)
     int count = col2.Length;
     int pos = 0;
     Console.Write("[");
-    while (pos < count) 
+    while (pos < count)
     {
-        if (pos < count -1)
+        if (pos < count - 1)
         {
             Console.Write($"{col2[pos]}, ");
             pos++;
@@ -37,7 +37,7 @@ void PrintArray(int[] col2)
             Console.WriteLine($"{col2[pos]}]");
             pos++;
         }
-        
+
     }
 }
 
